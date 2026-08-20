@@ -1,0 +1,50 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Clean Next build",
+			"type": "shell",
+			"command": "Remove-Item -Recurse -Force .next -ErrorAction SilentlyContinue; npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Clean Next build cmd",
+			"type": "shell",
+			"command": "if exist .next rmdir /s /q .next & npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Validate Agromia build",
+			"type": "shell",
+			"command": "npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Clean and validate Agromia",
+			"type": "shell",
+			"command": "if exist .next rmdir /s /q .next & npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		},
+		{
+			"label": "Rebuild Agromia after type fix",
+			"type": "shell",
+			"command": "if exist .next rmdir /s /q .next & npm run build",
+			"isBackground": false,
+			"problemMatcher": [
+				"$tsc"
+			]
+		}
+	]
+}

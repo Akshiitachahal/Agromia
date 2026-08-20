@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "about": "About",
+    "products": "Products",
+    "why": "Why AGROMIA",
+    "leadership": "Leadership",
+    "quality": "Quality",
+    "contact": "Contact",
+    "enquire": "Enquire Now"
+  },
+  "hero": {
+    "tagline": "फसल की सुरक्षा, किसान का विश्वास।",
+    "subtitle": "Smart solutions for better crops.",
+    "cta_primary": "Explore Products",
+    "cta_secondary": "Enquire Now"
+  },
+  "about": {
+    "label": "About AGROMIA",
+    "heading": "Growing With Purpose",
+    "statement": "Built for the farmer who demands more from every season.",
+    "body": "AGROMIA represents reliable crop protection solutions for farmers, dealers and agricultural partners. Our portfolio is selected to support better crop decisions, stronger seasons and confidence in the field.",
+    "cta": "Learn More"
+  },
+  "categories": {
+    "label": "Product Range",
+    "heading": "Complete Crop Protection",
+    "fungicides": {
+      "name": "Fungicides",
+      "description": "Proven protection against fungal diseases across major crops."
+    },
+    "insecticides": {
+      "name": "Insecticides",
+      "description": "Targeted control of insects at every growth stage."
+    },
+    "seed-treatment": {
+      "name": "Seed Treatment",
+      "description": "A stronger start for every seed in every season."
+    }
+  },
+  "featured_products": {
+    "label": "Featured Products",
+    "heading": "Our Products",
+    "cta": "View All Products",
+    "view_details": "View Details",
+    "enquire": "Enquire"
+  },
+  "why": {
+    "label": "Why AGROMIA",
+    "heading": "The AGROMIA Difference"
+  },
+  "leadership": {
+    "label": "Leadership",
+    "heading": "The People Behind AGROMIA"
+  },
+  "quality": {
+    "label": "Quality",
+    "heading": "From product to field",
+    "description": "AGROMIA presents crop-care products with clear information and a focus on the needs of farmers and agricultural partners."
+  },
+  "cta_section": {
+    "heading": "Grow With AGROMIA.",
+    "cta_primary": "Explore Products",
+    "cta_secondary": "Enquire Now"
+  },
+  "products": {
+    "heading": "Our Products",
+    "search_placeholder": "Search products…",
+    "all_categories": "All Categories",
+    "no_results": "No products found for your search.",
+    "load_more": "Load More",
+    "finder": {
+      "heading": "Find the Right Solution",
+      "step1": "Choose a Crop",
+      "step2": "Choose a Problem",
+      "step3": "Recommended Products",
+      "select_crop": "Select Crop",
+      "select_problem": "Select Problem",
+      "no_mapping": "No products found for this combination. Please contact us."
+    }
+  },
+  "product": {
+    "composition": "Composition",
+    "formulation": "Formulation",
+    "benefits": "Key Benefits",
+    "target_crops": "Target Crops",
+    "target_pests": "Target Pest / Disease",
+    "dosage": "Dosage & Method of Application",
+    "technical": "Technical Information",
+    "packaging": "Packaging",
+    "recommendation": "Recommendation",
+    "enquire": "Enquire About This Product",
+    "download": "Download Technical Sheet",
+    "category": "Category",
+    "related": "Related Products"
+  },
+  "enquiry": {
+    "heading": "Send an Enquiry",
+    "name": "Your Name",
+    "mobile": "Mobile Number",
+    "email": "Email Address",
+    "product": "Product (if applicable)",
+    "subject": "Subject",
+    "message": "Your Message",
+    "submit": "Send Enquiry",
+    "success": "Thank you. Your enquiry has been received. We will contact you shortly.",
+    "error": "Something went wrong. Please try again or contact us directly.",
+    "name_required": "Name is required",
+    "message_required": "Message is required",
+    "email_invalid": "Please enter a valid email address"
+  },
+  "contact": {
+    "heading": "Contact Us",
+    "label": "Get in Touch",
+    "phone": "Phone",
+    "whatsapp": "WhatsApp",
+    "email": "Email",
+    "address": "Address",
+    "form_heading": "Send a Message"
+  },
+  "footer": {
+    "tagline": "Smart solutions for better crops.",
+    "quick_links": "Quick Links",
+    "products": "Products",
+    "contact_us": "Contact Us",
+    "follow_us": "Follow Us",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms & Conditions",
+    "disclaimer": "Disclaimer",
+    "cookies": "Cookie Policy",
+    "copyright": "© AGROMIA LLP. All Rights Reserved.",
+    "legal_name": "AGROMIA LLP"
+  },
+  "whatsapp": {
+    "generic": "Hello AGROMIA, I would like to enquire about your agricultural products.",
+    "product": "Hello AGROMIA, I would like to enquire about {product}."
+  },
+  "common": {
+    "back": "Back",
+    "close": "Close",
+    "loading": "Loading…",
+    "read_more": "Read More",
+    "view_all": "View All",
+    "placeholder_required": "[REQUIRED FROM CLIENT]",
+    "error_generic": "Something went wrong. Please try again.",
+    "not_found": "Page Not Found",
+    "not_found_desc": "The page you are looking for does not exist."
+  }
+}

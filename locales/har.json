@@ -1,0 +1,149 @@
+{
+  "nav": {
+    "about": "हमारे बारे म्ह",
+    "products": "उत्पाद",
+    "why": "क्यूं AGROMIA",
+    "leadership": "नेतृत्व",
+    "quality": "गुणवत्ता",
+    "contact": "संपर्क करो",
+    "enquire": "जानकारी लो"
+  },
+  "hero": {
+    "tagline": "फसल की रक्षा, किसान का भरोसा।",
+    "subtitle": "खेती के लिए बढ़िया समाधान।",
+    "cta_primary": "उत्पाद देखो",
+    "cta_secondary": "जानकारी लो"
+  },
+  "about": {
+    "label": "AGROMIA के बारे म्ह",
+    "heading": "मकसद के साथ खेती",
+    "statement": "हर फसल म्ह ज्यादा चाहण आले किसान के लिए बणाया।",
+    "body": "AGROMIA किसान, डीलर और कृषि साझेदारां खातर भरोसेमंद फसल सुरक्षा समाधान लेके आवै है। म्हारा पोर्टफोलियो बेहतर फैसले और मजबूत मौसम खातर चुन्या गया है।",
+    "cta": "और जानो"
+  },
+  "categories": {
+    "label": "उत्पाद श्रृंखला",
+    "heading": "पूरी फसल सुरक्षा",
+    "fungicides": {
+      "name": "फफूंदनाशक",
+      "description": "फसलों में फंगल रोगों से पक्की सुरक्षा।"
+    },
+    "insecticides": {
+      "name": "कीटनाशक",
+      "description": "हर अवस्था म्ह कीड़ों का नियंत्रण।"
+    },
+    "seed-treatment": {
+      "name": "बीज उपचार",
+      "description": "हर बीज के लिए मजबूत शुरुआत।"
+    }
+  },
+  "featured_products": {
+    "label": "खास उत्पाद",
+    "heading": "हमारे उत्पाद",
+    "cta": "सारे उत्पाद देखो",
+    "view_details": "विवरण देखो",
+    "enquire": "जानकारी लो"
+  },
+  "why": {
+    "label": "क्यूं AGROMIA",
+    "heading": "AGROMIA की खासियत"
+  },
+  "leadership": {
+    "label": "नेतृत्व",
+    "heading": "AGROMIA के पीछे के लोग"
+  },
+  "quality": {
+    "label": "गुणवत्ता",
+    "heading": "उत्पाद तै खेत तक",
+    "description": "AGROMIA किसान और कृषि साझेदारां की जरूरतां पे ध्यान देकै फसल सुरक्षा उत्पादां की साफ जानकारी देवे है।"
+  },
+  "cta_section": {
+    "heading": "AGROMIA के साथ बढ़ो।",
+    "cta_primary": "उत्पाद देखो",
+    "cta_secondary": "जानकारी लो"
+  },
+  "products": {
+    "heading": "हमारे उत्पाद",
+    "search_placeholder": "उत्पाद खोजो…",
+    "all_categories": "सारी श्रेणियां",
+    "no_results": "कोई उत्पाद नहीं मिला।",
+    "load_more": "और लोड करो",
+    "finder": {
+      "heading": "सही समाधान खोजो",
+      "step1": "फसल चुनो",
+      "step2": "समस्या चुनो",
+      "step3": "सुझाए गए उत्पाद",
+      "select_crop": "फसल चुनो",
+      "select_problem": "समस्या चुनो",
+      "no_mapping": "इस लिए कोई उत्पाद नहीं मिला। हमसे संपर्क करो।"
+    }
+  },
+  "product": {
+    "composition": "संरचना",
+    "formulation": "फॉर्मूलेशन",
+    "benefits": "मुख्य फायदे",
+    "target_crops": "फसलें",
+    "target_pests": "कीट / रोग",
+    "dosage": "खुराक और प्रयोग",
+    "technical": "तकनीकी जानकारी",
+    "packaging": "पैकेजिंग",
+    "recommendation": "सिफारिश",
+    "enquire": "इस उत्पाद के बारे म्ह पूछो",
+    "download": "तकनीकी शीट डाउनलोड करो",
+    "category": "श्रेणी",
+    "related": "संबंधित उत्पाद"
+  },
+  "enquiry": {
+    "heading": "जानकारी भेजो",
+    "name": "तुम्हारा नाम",
+    "mobile": "मोबाइल नंबर",
+    "email": "ईमेल",
+    "product": "उत्पाद",
+    "subject": "विषय",
+    "message": "संदेश",
+    "submit": "भेजो",
+    "success": "धन्यवाद। तुम्हारी जानकारी मिल गई।",
+    "error": "कुछ गड़बड़ हो गई। फिर कोशिश करो।",
+    "name_required": "नाम जरूरी है",
+    "message_required": "संदेश जरूरी है",
+    "email_invalid": "सही ईमेल डालो"
+  },
+  "contact": {
+    "heading": "संपर्क करो",
+    "label": "जुड़ो",
+    "phone": "फ़ोन",
+    "whatsapp": "व्हाट्सएप",
+    "email": "ईमेल",
+    "address": "पता",
+    "form_heading": "संदेश भेजो"
+  },
+  "footer": {
+    "tagline": "बढ़िया फसल के लिए स्मार्ट समाधान।",
+    "quick_links": "त्वरित लिंक",
+    "products": "उत्पाद",
+    "contact_us": "संपर्क करो",
+    "follow_us": "फॉलो करो",
+    "legal": "कानूनी",
+    "privacy": "प्राइवेसी पॉलिसी",
+    "terms": "नियम शर्तें",
+    "disclaimer": "अस्वीकरण",
+    "cookies": "कुकी पॉलिसी",
+    "copyright": "© AGROMIA LLP. सर्वाधिकार सुरक्षित।",
+    "legal_name": "AGROMIA LLP"
+  },
+  "whatsapp": {
+    "generic": "नमस्ते AGROMIA, मैं आपके कृषि उत्पादों के बारे म्ह जानकारी लेना चाहता हूँ।",
+    "product": "नमस्ते AGROMIA, मैं {product} के बारे म्ह जानकारी लेना चाहता हूँ।"
+  },
+  "common": {
+    "back": "वापस",
+    "close": "बंद करो",
+    "loading": "लोड हो रहा है…",
+    "read_more": "और पढ़ो",
+    "view_all": "सब देखो",
+    "placeholder_required": "[क्लाइंट से जरूरी]",
+    "error_generic": "कुछ गड़बड़ हो गई। फिर कोशिश करो।",
+    "not_found": "पन्ना नहीं मिला",
+    "not_found_desc": "तुम जो पन्ना ढूंढ रहे हो वो नहीं है।"
+  }
+}
