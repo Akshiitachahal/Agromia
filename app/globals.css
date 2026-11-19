@@ -10,6 +10,12 @@
    ───────────────────────────────────────────────── */
 
 :root {
+  --font-jakarta: 'Plus Jakarta Sans';
+  --font-hero-serif: 'Cormorant Garamond';
+  --font-hero-sans: 'Manrope';
+  --font-noto-devanagari: 'Noto Serif Devanagari';
+  --font-noto-devanagari-sans: 'Noto Sans Devanagari';
+
   /* Luxury Palette */
   --color-ivory: #FAF9F6;
   --color-sand: #F4F2EC;
