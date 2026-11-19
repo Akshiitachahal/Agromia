@@ -5,12 +5,14 @@ import { motion, useInView } from 'framer-motion';
 import { useI18n } from '@/lib/i18n-context';
 import { cn } from '@/lib/utils';
 
-const DIRECTORS = [
-  { id: '1', image: '1500648767791-00dcc994a43e' },
-  { id: '2', image: '1507003211169-0a1dd7228f2d' },
-];
+export type LeadershipDirector = {
+  id: string;
+  name: string;
+  designation: string;
+  imageUrl?: string | null;
+};
 
-export default function Leadership() {
+export default function Leadership({ directors = [] }: { directors?: LeadershipDirector[] }) {
   const { t, locale } = useI18n();
   const sectionRef = useRef<HTMLElement>(null);
   const isInView = useInView(sectionRef, { once: true, margin: '-80px' });
@@ -27,12 +29,14 @@ export default function Leadership() {
         </motion.div>
 
         <div className="leadership-portraits">
-          {DIRECTORS.map((d) => (
-            <motion.figure key={d.id} initial={{ opacity: 0, y: 28 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8, delay: Number(d.id) * 0.12 }} className="leadership-portrait">
-              <div className="leadership-portrait-image" style={{ backgroundImage: `url('https://images.unsplash.com/photo-${d.image}?auto=format&fit=crop&w=1000&q=88')` }} />
-              <figcaption><span>0{d.id} / Leadership</span><strong>AGROMIA</strong></figcaption>
+          {directors.length ? directors.map((d, index) => (
+            <motion.figure key={d.id} initial={{ opacity: 0, y: 28 }} animate={isInView ? { opacity: 1, y: 0 } : {}} transition={{ duration: 0.8, delay: index * 0.12 }} className="leadership-portrait">
+              <div className="leadership-portrait-image" style={d.imageUrl ? { backgroundImage: `url('${d.imageUrl}')` } : undefined} />
+              <figcaption><span>{d.designation || 'Leadership'}</span><strong>{d.name}</strong></figcaption>
             </motion.figure>
-          ))}
+          )) : (
+            <p className="editorial-body">Leadership profiles will appear here.</p>
+          )}
         </div>
       </div>
     </section>

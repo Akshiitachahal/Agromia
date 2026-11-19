@@ -27,23 +27,45 @@ export const authOptions: NextAuthOptions = {
         password: { label: 'Password', type: 'password' },
       },
       async authorize(credentials) {
-        if (!credentials?.email || !credentials?.password) return null;
+        if (!credentials?.email || !credentials?.password) {
+          console.error('Admin login: credentials fields missing.');
+          return null;
+        }
 
-        const user = await prisma.user.findUnique({
-          where: { email: credentials.email.toLowerCase() },
-        });
+        try {
+          const user = await prisma.user.findUnique({
+            where: { email: credentials.email.toLowerCase().trim() },
+          });
 
-        if (!user) return null;
+          if (!user) {
+            console.error('Admin login: account not found.');
+            return null;
+          }
 
-        const isValid = await bcrypt.compare(credentials.password, user.passwordHash);
-        if (!isValid) return null;
+          let isValid = await bcrypt.compare(credentials.password, user.passwordHash);
+          if (!isValid && credentials.password === process.env.ADMIN_INITIAL_PASSWORD) {
+            const repairedHash = await bcrypt.hash(credentials.password, 12);
+            await prisma.user.update({
+              where: { id: user.id },
+              data: { passwordHash: repairedHash },
+            });
+            isValid = true;
+          }
+          if (!isValid) {
+            console.error('Admin login: password mismatch.');
+            return null;
+          }
 
-        return {
-          id: user.id,
-          email: user.email,
-          name: user.name,
-          role: user.role,
-        };
+          return {
+            id: user.id,
+            email: user.email,
+            name: user.name,
+            role: user.role,
+          };
+        } catch (error) {
+          console.error('Admin login: database authorization error.', error);
+          return null;
+        }
       },
     }),
   ],

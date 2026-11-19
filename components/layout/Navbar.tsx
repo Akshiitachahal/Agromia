@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu, X, ChevronDown } from 'lucide-react';
@@ -76,7 +77,7 @@ export default function Navbar() {
               aria-label="AGROMIA — Home"
             >
               <div className="flex items-center gap-2">
-                <img src="/logo.png" alt="AGROMIA" className="h-9 w-auto object-contain" />
+                <Image src="/logo.png" alt="AGROMIA" width={36} height={36} className="h-9 w-auto object-contain" priority />
               </div>
             </Link>
 
@@ -172,7 +173,7 @@ export default function Navbar() {
               className="fixed top-0 right-0 bottom-0 z-50 w-[85vw] max-w-[360px] bg-white flex flex-col p-6"
             >
               <div className="flex items-center justify-between pb-4 border-b border-gray-100">
-                <img src="/logo.png" alt="AGROMIA" className="h-8 w-auto object-contain" />
+                <Image src="/logo.png" alt="AGROMIA" width={32} height={32} className="h-8 w-auto object-contain" />
                 <button onClick={() => setMobileOpen(false)}><X className="w-5 h-5" /></button>
               </div>
 

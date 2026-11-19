@@ -1,24 +1,37 @@
 import { NextRequest, NextResponse } from 'next/server';
 import { prisma } from '@/lib/prisma';
 import { requireAdmin } from '../../_auth';
+import { productPatchSchema } from '@/lib/validations';
 
 export async function PATCH(request: NextRequest, { params }: { params: { id: string } }) {
   const denied = await requireAdmin();
   if (denied) return denied;
-  const body = await request.json();
+  const parsed = productPatchSchema.safeParse(await request.json());
+  if (!parsed.success) return NextResponse.json({ error: parsed.error.flatten() }, { status: 400 });
+  const body = parsed.data;
   const product = await prisma.product.update({
     where: { id: params.id },
     data: {
-      slug: body.slug,
-      categoryId: body.categoryId,
-      primaryImageUrl: body.primaryImageUrl || null,
-      isPublished: body.isPublished === true,
-      isFeatured: body.isFeatured === true,
-      displayOrder: Number(body.displayOrder || 0),
-      translations: { upsert: { where: { productId_locale: { productId: params.id, locale: 'EN' } }, create: { locale: 'EN', name: body.name, shortDescription: body.shortDescription || null }, update: { name: body.name, shortDescription: body.shortDescription || null, composition: body.composition || null, formulation: body.formulation || null, benefits: body.benefits || null, targetCrops: body.targetCrops || null, targetPests: body.targetPests || null, dosage: body.dosage || null, applicationMethod: body.applicationMethod || null, packaging: body.packaging || null, technicalInfo: body.technicalInfo || null, recommendation: body.recommendation || null } } },
+      ...(body.slug !== undefined ? { slug: body.slug } : {}),
+      ...(body.categoryId !== undefined ? { categoryId: body.categoryId } : {}),
+      ...(body.primaryImageUrl !== undefined ? { primaryImageUrl: body.primaryImageUrl || null } : {}),
+      ...(body.isPublished !== undefined ? { isPublished: body.isPublished } : {}),
+      ...(body.isFeatured !== undefined ? { isFeatured: body.isFeatured } : {}),
+      ...(body.displayOrder !== undefined ? { displayOrder: body.displayOrder } : {}),
     },
     include: { translations: true },
   });
+  if (body.translations) {
+    for (const [key, translation] of Object.entries(body.translations)) {
+      if (!translation) continue;
+      const locale = key.toUpperCase() as 'EN' | 'HI' | 'HAR';
+      await prisma.productTranslation.upsert({
+        where: { productId_locale: { productId: params.id, locale } },
+        create: { productId: params.id, locale, name: translation.name || '', ...translation },
+        update: { ...translation },
+      });
+    }
+  }
   return NextResponse.json(product);
 }
 

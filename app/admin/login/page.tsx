@@ -2,21 +2,28 @@
 
 import { FormEvent, useState } from 'react';
 import { signIn } from 'next-auth/react';
+import Link from 'next/link';
 
 export default function AdminLoginPage() {
   const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setError('');
+    setLoading(true);
     const form = new FormData(event.currentTarget);
     const result = await signIn('credentials', {
       email: form.get('email'),
       password: form.get('password'),
       redirect: false,
     });
-    if (result?.error) setError('Invalid email or password.');
-    else window.location.href = '/admin';
+    if (result?.error) {
+      setError('Invalid email or password, or the database is unavailable.');
+      setLoading(false);
+      return;
+    }
+    window.location.href = '/admin';
   }
 
   return (
@@ -29,7 +36,8 @@ export default function AdminLoginPage() {
         <label className="block text-sm text-charcoal">Email<input name="email" type="email" required className="form-input-editorial" /></label>
         <label className="block text-sm text-charcoal">Password<input name="password" type="password" required className="form-input-editorial" /></label>
         {error && <p className="text-sm text-red-700">{error}</p>}
-        <button type="submit" className="btn btn-primary w-full justify-center">Sign in</button>
+        <button type="submit" disabled={loading} className="btn btn-primary w-full justify-center">{loading ? 'Signing in...' : 'Sign in'}</button>
+        <Link href="/admin/forgot-password" className="block text-center text-sm text-forest underline">Forgot password?</Link>
       </form>
     </main>
   );

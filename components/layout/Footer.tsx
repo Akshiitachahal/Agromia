@@ -6,10 +6,9 @@ import { useI18n } from '@/lib/i18n-context';
 import { cn } from '@/lib/utils';
 
 const PLACEHOLDER_CONTACT = {
-  phone: '[PHONE]',
-  email: '[EMAIL]',
+  phone: 'Phone coming soon',
+  email: 'Email coming soon',
   address: 'Haridwar Road, Chandok, District Bijnor, Uttar Pradesh – 246721',
-  whatsapp: '[WHATSAPP]',
 };
 
 export default function Footer() {
@@ -81,16 +80,16 @@ export default function Footer() {
             <h3 className="text-label text-white/50 mb-4">{t('footer.contact_us')}</h3>
             <ul className="space-y-3.5">
               <li>
-                <a href={`tel:${PLACEHOLDER_CONTACT.phone}`} className="flex items-start gap-2.5 text-sm text-white/80 hover:text-white">
+                <div className="flex items-start gap-2.5 text-sm text-white/80">
                   <Phone className="w-4 h-4 mt-0.5 text-sage" />
                   <span>{PLACEHOLDER_CONTACT.phone}</span>
-                </a>
+                </div>
               </li>
               <li>
-                <a href={`mailto:${PLACEHOLDER_CONTACT.email}`} className="flex items-start gap-2.5 text-sm text-white/80 hover:text-white">
+                <div className="flex items-start gap-2.5 text-sm text-white/80">
                   <Mail className="w-4 h-4 mt-0.5 text-sage" />
                   <span>{PLACEHOLDER_CONTACT.email}</span>
-                </a>
+                </div>
               </li>
               <li>
                 <div className="flex items-start gap-2.5 text-sm text-white/80">
@@ -112,6 +111,7 @@ export default function Footer() {
                 {link.label}
               </Link>
             ))}
+            <Link href="/admin/login" className="text-xs text-white/50 hover:text-white/80">Admin login</Link>
           </div>
         </div>
       </div>
